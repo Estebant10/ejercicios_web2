@@ -1,0 +1,28 @@
+## 10. Número de caracteres
+
+Escribir una función llamada `numeroDeCaracteres` que reciba un string y un caracter (un string de un caracter). La función debe retornar el número de veces que aparece el caracter en el string.
+
+```javascript
+function numeroDeCaracteres(str, caracter) {
+  // Inicializar un contador para contar las ocurrencias del caracter
+  var contador = 0;
+  
+  // Iterar sobre cada carácter del string
+  for (var i = 0; i < str.length; i++) {
+    // Verificar si el carácter actual es igual al caracter dado
+    if (str[i] === caracter) {
+      // Incrementar el contador si es así
+      contador++;
+    }
+  }
+  
+  // Retornar el contador que contiene el número de ocurrencias del caracter
+  return contador;
+}
+
+// Código de prueba
+console.log(numeroDeCaracteres("Hola Mundo", "o")); // 2
+console.log(numeroDeCaracteres("MMMMM", "m")); // 0
+console.log(numeroDeCaracteres("eeee", "e")); // 4
+
+```

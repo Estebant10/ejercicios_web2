@@ -1,0 +1,28 @@
+## 22. Encontrar posiciones de números pares
+
+Escribir una función llamada `posiciones` que reciba un arreglo de números y retorne un nuevo arreglo **con las posiciones** donde se encuentran números pares.
+
+```javascript
+function posiciones(arreglo) {
+  // Inicializar un arreglo para almacenar las posiciones de los números pares
+  var posicionesPares = [];
+  
+  // Iterar sobre los elementos del arreglo
+  for (var i = 0; i < arreglo.length; i++) {
+    // Verificar si el número en la posición actual es par
+    if (arreglo[i] % 2 === 0) {
+      // Si es par, almacenar la posición en el arreglo de posiciones pares
+      posicionesPares.push(i);
+    }
+  }
+  
+  // Retornar el arreglo de posiciones pares
+  return posicionesPares;
+}
+
+// Código de prueba
+console.log(posiciones([1, 2, 3, 4, 5, 6])); // [1, 3, 5]
+console.log(posiciones([])); // []
+
+
+```

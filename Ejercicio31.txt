@@ -1,0 +1,30 @@
+## 31. Distancia entre dos strings
+
+Escribir una función llamada `distancia` que reciba dos strings y retorne el número de caracteres diferentes (comparando posición por posición).
+
+**Nota:** Puedes asumir que los strings siempre tienen la misma longitud. Sin embargo, si quieres agregarle más dificultad puedes pensar cómo solucionarlo si un string es más largo que el otro (la diferencia entre las longitudes agregaría al resultado).
+
+```javascript
+function distancia(str1, str2) {
+  // Inicializar una variable para contar la distancia
+  var distancia = 0;
+  
+  // Iterar sobre cada caracter en los strings
+  for (var i = 0; i < str1.length; i++) {
+    // Comparar los caracteres en la misma posición
+    if (str1[i] !== str2[i]) {
+      // Incrementar la distancia si los caracteres son diferentes
+      distancia++;
+    }
+  }
+  
+  // Retornar la distancia total
+  return distancia;
+}
+
+// Código de prueba
+console.log(distancia("hola", "hola")); // 0
+console.log(distancia("sol", "tol")); // 1
+console.log(distancia("carro", "correr")); // 3
+
+```

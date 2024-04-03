@@ -1,0 +1,33 @@
+## 28. Traducir palabras a números
+
+Escribir una función llamada `palabrasANumeros` que reciba un arreglo de strings y retorne un nuevo arreglo traduciendo cada palabra a su versión numérica (del 0 al 9). Si la palabra no es un número traducir a -1.
+
+```javascript
+function palabrasANumeros(arreglo) {
+  // Objeto para mapear cada palabra a su versión numérica
+  var numeros = {
+    "cero": 0,
+    "uno": 1,
+    "dos": 2,
+    "tres": 3,
+    "cuatro": 4,
+    "cinco": 5,
+    "seis": 6,
+    "siete": 7,
+    "ocho": 8,
+    "nueve": 9
+  };
+  
+  // Utilizar el método map() para crear un nuevo arreglo con las versiones numéricas de las palabras
+  var numerosPalabras = arreglo.map(function(palabra) {
+    // Verificar si la palabra está en el objeto y retornar su versión numérica, o -1 si no está
+    return numeros.hasOwnProperty(palabra) ? numeros[palabra] : -1;
+  });
+  
+  // Retornar el nuevo arreglo con las versiones numéricas de las palabras
+  return numerosPalabras;
+}
+
+// Código de prueba
+console.log(palabrasANumeros(["cero", "uno", "dos", "tres", "what?", "cuatro"])); // [0, 1, 2, 3, -1, 4]
+console.log(palabrasANumeros(["cinco", "seis", "siete", "ocho", "nueve"])); // [5, 6, 7, 8, 9]

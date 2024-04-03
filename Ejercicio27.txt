@@ -1,0 +1,22 @@
+## 27. Traducir números a palabras
+
+Escribir una función llamada `numerosAPalabras` que reciba un arreglo de números (cada número en el rango de 0 a 0) y retorne un nuevo arreglo convirtiendo cada número a su versión en palabras.
+
+```javascript
+function numerosAPalabras(arreglo) {
+  // Arreglo para mapear cada número a su versión en palabras
+  var palabras = ["cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"];
+  
+  // Utilizar el método map() para crear un nuevo arreglo con las versiones en palabras de los números
+  var palabrasNumeros = arreglo.map(function(numero) {
+    return palabras[numero];
+  });
+  
+  // Retornar el nuevo arreglo con las versiones en palabras de los números
+  return palabrasNumeros;
+}
+
+// Código de prueba
+console.log(numerosAPalabras([0, 1, 2, 3, 4])); // ["cero", "uno", "dos", "tres", "cuatro"]
+console.log(numerosAPalabras([5, 6, 7, 8, 9])); // ["cinco", "seis", "siete", "ocho", "nueve"]
+```

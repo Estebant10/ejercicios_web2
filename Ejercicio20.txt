@@ -1,0 +1,35 @@
+## 20. Generar contraseña
+
+Escribir una función llamada `password` que reciba un string y retorne un nuevo string realizando los siguientes cambios:
+
+* Las mayúsculas se reemplazan por minúsculas.
+* Se eliminan los espacios en blanco.
+* Reemplaza el caracter “a” por “4”.
+* Reemplaza el caracter “e” por “3”.
+* Reemplaza el caracter “i” por “1”.
+* Reemplaza el carater “o” por “0”.
+
+```javascript
+function password(str) {
+  // Reemplazar mayúsculas por minúsculas
+  str = str.toLowerCase();
+  
+  // Eliminar espacios en blanco
+  str = str.replace(/\s+/g, '');
+  
+  // Realizar los reemplazos de caracteres
+  str = str.replace(/a/g, '4');
+  str = str.replace(/e/g, '3');
+  str = str.replace(/i/g, '1');
+  str = str.replace(/o/g, '0');
+
+  // Retornar el nuevo string resultante
+  return str;
+}
+
+// Código de prueba
+console.log(password("hola")); // "h0l4"
+console.log(password("esta es una prueba")); // "3st43sun4pru3b4"
+console.log(password("")); // ""
+
+```

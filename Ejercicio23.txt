@@ -1,0 +1,20 @@
+## 23. Duplicar elementos de un arreglo
+
+Escribir una función llamada `duplicar` que reciba un arreglo de números y retorne un nuevo arreglo donde cada número esté multiplicado por dos (2).
+
+```javascript
+function duplicar(arreglo) {
+  // Utilizar el método map() para crear un nuevo arreglo con los elementos duplicados
+  var duplicados = arreglo.map(function(numero) {
+    return numero * 2;
+  });
+  
+  // Retornar el nuevo arreglo con los elementos duplicados
+  return duplicados;
+}
+
+// Código de prueba
+console.log(duplicar([1, 2, 3])); // [2, 4, 6]
+console.log(duplicar([])); // []
+
+```

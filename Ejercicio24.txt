@@ -1,0 +1,22 @@
+## 24. Encontrar palabras que empiecen por "a"
+
+Escribir una función llamada `empiezanConA` que reciba un arreglo de strings y retorne un nuevo arreglo con todas las palabras que empiecen por "a" (mayúscula o minúscula).
+
+```javascript
+function empiezanConA(arreglo) {
+  // Utilizar el método filter() para crear un nuevo arreglo con las palabras que empiecen por "a"
+  var palabrasConA = arreglo.filter(function(palabra) {
+    // Convertir la primera letra a minúscula y verificar si es "a"
+    return palabra.charAt(0).toLowerCase() === 'a';
+  });
+  
+  // Retornar el nuevo arreglo con las palabras que empiecen por "a"
+  return palabrasConA;
+}
+
+// Código de prueba
+console.log(empiezanConA(["beta", "alfa", "Arbol", "gama"])); // ["alfa", "Arbol"]
+console.log(empiezanConA(["beta", "delta", "gama"])); // []
+console.log(empiezanConA([])); // []
+
+```

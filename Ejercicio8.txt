@@ -1,0 +1,26 @@
+## 8. Sumar rango de números
+
+Escribir una función llamada `sumarRango` que reciba dos argumentos: número inicial y número final. La función debe retornar la suma de los números en ese rango (incluyéndolos).
+
+**Nota:** puedes asumir que el número inicial va a ser menor o igual que el número final.
+
+```javascript
+function sumarRango(numInicial, numFinal) {
+  // Inicializar una variable para almacenar la suma
+  var suma = 0;
+  
+  // Iterar desde el número inicial hasta el número final
+  for (var i = numInicial; i <= numFinal; i++) {
+    // Sumar el número actual a la suma
+    suma += i;
+  }
+  
+  // Retornar la suma total
+  return suma;
+}
+
+// Código de prueba
+console.log(sumarRango(0, 10)); // 55
+console.log(sumarRango(12, 14)); // 39
+console.log(sumarRango(5, 5)); // 5
+```

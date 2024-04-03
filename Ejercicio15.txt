@@ -1,0 +1,39 @@
+## 15. Transcribir ADN a ARN
+
+Escribir una función llamada `transcribir` que reciba un string (una cadena de ADN) y retorne otro string (su complemento ARN).
+
+Los complementos son los siguientes:
+
+* G -> C
+* C -> G
+* T -> A
+* A -> U
+
+```javascript
+function transcribir(adn) {
+  // Crear un objeto para mapear las bases de ADN a sus complementos ARN
+  var complementos = {
+    'G': 'C',
+    'C': 'G',
+    'T': 'A',
+    'A': 'U'
+  };
+
+  // Inicializar una variable para almacenar el ARN transcribido
+  var arn = '';
+
+  // Iterar sobre cada base de ADN en el string
+  for (var i = 0; i < adn.length; i++) {
+    // Obtener el complemento ARN correspondiente a la base de ADN actual y concatenarlo al resultado
+    arn += complementos[adn[i]];
+  }
+
+  // Retornar el ARN transcribido
+  return arn;
+}
+
+// Código de prueba
+console.log(transcribir("ACGT")); // "UGCA"
+console.log(transcribir("ACGTGGTCTTAA")); // "UGCACCAGAAUU"
+
+```

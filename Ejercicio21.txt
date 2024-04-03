@@ -1,0 +1,21 @@
+## 21. Encontrar números pares en un arreglo
+
+Escribir una función llamada `pares` que reciba un arreglo de números y retorne un nuevo arreglo con los números pares únicamente.
+
+```javascript
+function pares(arreglo) {
+  // Utilizar el método filter() para crear un nuevo arreglo con los números pares
+  var pares = arreglo.filter(function(numero) {
+    return numero % 2 === 0;
+  });
+  
+  // Retornar el nuevo arreglo con los números pares
+  return pares;
+}
+
+// Código de prueba
+console.log(pares([1, 2, 3, 4, 5, 6])); // [2, 4, 6]
+console.log(pares([])); // []
+
+
+```

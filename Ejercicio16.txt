@@ -1,0 +1,21 @@
+## 16. Capitalizar palabra
+
+Escribir una función llamada `capitalizar` que reciba un string y capitalice la primera letra:
+
+```javascript
+function capitalizar(palabra) {
+  // Verificar si la palabra es una cadena vacía
+  if (palabra === '') {
+    return '';
+  }
+
+  // Capitalizar la primera letra y concatenarla con el resto de la palabra
+  return palabra[0].toUpperCase() + palabra.slice(1);
+}
+
+// Código de prueba
+console.log(capitalizar("pedro")); // "Pedro"
+console.log(capitalizar("hola mundo")); // "Hola mundo"
+console.log(capitalizar("")); // ""
+
+```

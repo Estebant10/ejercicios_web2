@@ -1,0 +1,26 @@
+## 7. Contar rango de números
+
+Escribir una función llamada `contarRango` que reciba dos números y retorne cuántos números que hay entre ellos (excluyéndolos):
+
+**Nota:** Utiliza un ciclo en tu solución. Puedes asumir que el primer número va a ser menor que el segundo.
+
+```javascript
+function contarRango(num1, num2) {
+  // Inicializar un contador en 0
+  var contador = 0;
+  
+  // Iterar desde el primer número hasta el segundo número
+  for (var i = num1 + 1; i < num2; i++) {
+    // Incrementar el contador en cada iteración
+    contador++;
+  }
+  
+  // Retornar el contador que cuenta la cantidad de números en el rango
+  return contador;
+}
+
+// Código de prueba
+console.log(contarRango(1, 9)); // 7
+console.log(contarRango(1332, 8743)); // 7410
+console.log(contarRango(5, 6)); // 0
+```

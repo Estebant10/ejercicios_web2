@@ -1,0 +1,34 @@
+## 18. Encontrar el número máximo
+
+Escribir una función llamada `max` que reciba un arreglo de números y retorne el número máximo:
+
+**Nota:** Intentarlo hacer sin el método `Math.max` de JavaScript.
+
+```javascript
+function max(arreglo) {
+  // Verificar si el arreglo está vacío
+  if (arreglo.length === 0) {
+    return undefined; // En caso de arreglo vacío, retornar undefined
+  }
+
+  // Inicializar la variable para almacenar el número máximo
+  var maximo = arreglo[0];
+
+  // Iterar sobre los elementos del arreglo a partir del segundo elemento
+  for (var i = 1; i < arreglo.length; i++) {
+    // Comparar el elemento actual con el número máximo y actualizarlo si es necesario
+    if (arreglo[i] > maximo) {
+      maximo = arreglo[i];
+    }
+  }
+
+  // Retornar el número máximo encontrado
+  return maximo;
+}
+
+// Código de prueba
+console.log(max([3, 9, 6])); // 9
+console.log(max([67, 35, 54, 26])); // 67
+console.log(max([5, 9, 2, 4, 5, 7])); // 9
+
+```

@@ -1,0 +1,25 @@
+## 17. Capitalizar cada palabra
+
+Escribir una función llamada `capitalizar` que reciba un string y capitalice la primera letra **de cada palabra**:
+
+```javascript
+function capitalizar(frase) {
+  // Dividir la frase en palabras
+  var palabras = frase.split(' ');
+
+  // Iterar sobre cada palabra
+  for (var i = 0; i < palabras.length; i++) {
+    // Capitalizar la primera letra de cada palabra y concatenarla con el resto de la palabra
+    palabras[i] = palabras[i].charAt(0).toUpperCase() + palabras[i].slice(1);
+  }
+
+  // Unir las palabras nuevamente en un solo string
+  return palabras.join(' ');
+}
+
+// Código de prueba
+console.log(capitalizar("hola mundo")); // "Hola Mundo"
+console.log(capitalizar("make it real")); // "Make It Real"
+console.log(capitalizar("")); // ""
+
+```

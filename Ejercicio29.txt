@@ -1,0 +1,22 @@
+## 29. Número de asteriscos en un arreglo
+
+Escribir una función llamada `numAsteriscos` que reciba un arreglo y retorne el número de asteriscos:
+
+```javascript
+function numAsteriscos(arreglo) {
+  // Utilizar el método reduce() para sumar el número de asteriscos en el arreglo
+  var numAsteriscos = arreglo.reduce(function(total, elemento) {
+    // Incrementar el total si el elemento es un asterisco
+    return total + (elemento === '*' ? 1 : 0);
+  }, 0);
+  
+  // Retornar el número total de asteriscos
+  return numAsteriscos;
+}
+
+// Código de prueba
+console.log(numAsteriscos(['', '*', '', '*'])); // 2
+console.log(numAsteriscos(['*', '*', '*'])); // 3
+console.log(numAsteriscos([])); // 0
+
+```
